@@ -19,6 +19,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    margin: 0;
 }
 
 html {
@@ -36,17 +37,20 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background-color: #c2c2c257;
     width: 100%;
+    background-color: #c2c2c257;
     z-index: 100;
-    padding: 1.5rem;
+    padding: 0; /* remove daqui */
 }
 
 .menu {
-    justify-content: center;
     display: flex;
-    list-style: none;
+    justify-content: center;
     gap: 3rem;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 1;
 }
 
 .menu-link {
@@ -107,7 +111,7 @@ body {
     color: #6b7280;
     margin-bottom: 1.2rem;
     text-transform: uppercase;
-    transform: translateX(6px);
+    transform: none;
 }
 
 .titulo-principal {
@@ -116,7 +120,7 @@ body {
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin-bottom: 1.8rem;
-    margin-left: -4px;
+    margin-left: 0;
     color: #111827;
 }
 
