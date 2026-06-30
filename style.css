@@ -5,7 +5,7 @@
 }
 
 :root {
-    --altura-menu: 90px;
+    --altura-menu: 70px;
 }
 
 #inicio {
@@ -46,11 +46,12 @@ body {
 .menu {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
     list-style: none;
+    margin: 0;
+    padding: 1rem 0;
     width: 100%;
-    padding: 0;
-    margin: 0.8rem 0;
 }
 
 .menu-link {
@@ -129,8 +130,7 @@ body {
     line-height: 1.9;
     color: #6b7280;
     max-width: 540px;
-
-
+    margin:0 auto;
 }
 
 .foto-container {
@@ -157,7 +157,7 @@ body {
 }
 
 .projetos {
-    padding: 2rem 2rem 6rem;
+    padding: 4rem 1rem;
 }
 
 .projetos-caixa {
@@ -243,7 +243,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(10px);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 16px;
     margin-top: -40px;
 }
@@ -346,18 +346,14 @@ body {
 }
 
 .tecnologia-card {
-    width: 150px;
-    height: 150px;
-
+    width: 130px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border-radius: 15px;
-
     background: rgba(255,255,255,.05);
-
     transition: .3s;
     cursor: pointer;
 }
@@ -382,24 +378,82 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .cabecalho-conteudo {
-        grid-template-columns: 1fr;
-        text-align: center;
+@media (max-width:768px){
+
+    :root{
+        --altura-menu:70px;
     }
 
-    .foto-container {
-        order: -1;
-        margin-bottom: 2rem;
+    .menu{
+        gap:1rem;
+        flex-wrap:wrap;
+        font-size:.95rem;
     }
 
-    .foto-perfil {
-        max-width: 280px;
-        margin: 0 auto;
+    .cabecalho{
+        padding:3rem 0;
     }
 
-    .nome-destaque {
-        letter-spacing: 0.5em;
-        transform: none;
+    .cabecalho-conteudo{
+        grid-template-columns:1fr;
+        text-align:center;
     }
+
+    .texto-cabecalho{
+        max-width:100%;
+    }
+
+    .foto-container{
+        order:-1;
+        margin-bottom:2rem;
+    }
+
+    .foto-perfil{
+        width:240px;
+        margin:auto;
+    }
+
+    .titulo-principal{
+        font-size:2.4rem;
+    }
+
+    .descricao{
+        font-size:1rem;
+        line-height:1.7;
+        margin:auto;
+    }
+
+    .nome-destaque{
+        letter-spacing:.35em;
+    }
+
+    .tecnologias-grid{
+        gap:15px;
+    }
+
+    .tecnologia-card{
+        width:110px;
+        height:110px;
+    }
+
+    .tecnologia-card img{
+        width:45px;
+    }
+
+    .tecnologia-card span{
+        font-size:14px;
+    }
+
+    .projetos{
+        padding:4rem 1rem;
+    }
+
+    .contatos{
+        padding:4rem 1rem;
+    }
+
+    .formulario-contato{
+        padding:1.5rem;
+    }
+
 }
