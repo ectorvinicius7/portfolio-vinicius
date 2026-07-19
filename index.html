@@ -161,22 +161,6 @@
 
     </script>
 
-    <script>
-        const foto = document.getElementById('fotoPerfil');
-
-        window.addEventListener('scroll', () => {
-            const scroll = window.scrollY;
-            const limite = 400;
-
-            let opacity = 1 - (scroll / limite);
-
-            if (opacity < 0) opacity = 0;
-            if (opacity > 1) opacity = 1;
-
-            foto.style.opacity = opacity;
-        });
-    </script>
-
 </body>
 
 </html>
